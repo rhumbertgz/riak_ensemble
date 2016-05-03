@@ -87,7 +87,7 @@ get_path(Opts) ->
     case proplists:get_value(path, Opts) of
         undefined ->
             Base = "/tmp/ST",
-            Name = integer_to_list(timestamp(opt_utils:get_current_time())),
+            Name = integer_to_list(timestamp(otp_utils:get_current_time())),
             filename:join(Base, Name);
         Path ->
             Path
